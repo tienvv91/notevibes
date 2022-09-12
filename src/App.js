@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import TextToSpeech from './pages/Text2Speech';
 import About from './pages/About';
 import { Button, Result } from 'antd';
+import Stores from './pages/Stores';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path='/' element={<ProLayout />} >
           <Route index={true} path='home' element={<TextToSpeech />} />
+          <Route path='store' element={<Stores />} />
           <Route path='about' element={<About />} />
           <Route path="*" element={<Result
             status="404"
